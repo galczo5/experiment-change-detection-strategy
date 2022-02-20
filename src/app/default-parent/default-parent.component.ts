@@ -8,6 +8,8 @@ import {getConsoleStyle} from "../consoleStyleFactory";
     <div>
       <button (click)="detect()">Detect Changes</button>
       <button (click)="mark()">Mark For Check</button>
+      <button (click)="log()">console.log('Click!')</button>
+
 
       <button (click)="setValue()">Set value</button>
       <button (click)="setNewValue()">Set new value</button>
@@ -60,5 +62,9 @@ export class DefaultParentComponent implements OnInit, OnChanges, DoCheck {
 
   mark() {
     this.changeDetectorRef.markForCheck();
+  }
+
+  log() {
+    console.log('Click!');
   }
 }

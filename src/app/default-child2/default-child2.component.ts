@@ -9,6 +9,7 @@ import {getConsoleStyle} from "../consoleStyleFactory";
     </h4>
     <button (click)="detect()">Detect Changes</button>
     <button (click)="mark()">Mark For Check</button>
+    <button (click)="log()">console.log('Click!')</button>
   `
 })
 export class DefaultChild2Component implements OnInit {
@@ -35,6 +36,10 @@ export class DefaultChild2Component implements OnInit {
 
   detect() {
     this.changeDetectorRef.detectChanges();
+  }
+
+  log() {
+    console.log('Click!');
   }
 
 }

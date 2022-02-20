@@ -7,6 +7,7 @@ import {getConsoleStyle} from "../consoleStyleFactory";
     <h4>Child 1</h4>
     <button (click)="detect()">Detect Changes</button>
     <button (click)="mark()">Mark For Check</button>
+    <button (click)="log()">console.log('Click!')</button>
     <p>{{ value.value }}</p>
   `,
   styles: [
@@ -39,6 +40,10 @@ export class DefaultChild1Component implements OnInit, OnChanges, DoCheck {
 
   detect() {
     this.changeDetectorRef.detectChanges();
+  }
+
+  log() {
+    console.log('Click!');
   }
 
 }

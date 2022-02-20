@@ -17,6 +17,7 @@ import {getConsoleStyle} from "../consoleStyleFactory";
     </h4>
     <button (click)="detect()">Detect Changes</button>
     <button (click)="mark()">Mark For Check</button>
+    <button (click)="log()">console.log('Click!')</button>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -46,4 +47,7 @@ export class OnPushChild2Component implements OnInit, OnChanges, DoCheck {
     this.changeDetectorRef.detectChanges();
   }
 
+  log() {
+    console.log('Click!');
+  }
 }
