@@ -15,6 +15,7 @@ import {Component, NgZone} from '@angular/core';
       <button (click)="clear()">
         Clear console
       </button>
+      <button (click)="log()">console.log('Click!')</button>
     </div>
     <div style="margin-top: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
       <app-default-parent style="border: 1px solid lightgray; padding: 10px;"></app-default-parent>
@@ -45,5 +46,9 @@ export class AppComponent {
 
   clear() {
     console.clear();
+  }
+
+  log() {
+    console.log('Click!');
   }
 }
