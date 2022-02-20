@@ -8,5 +8,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+const compilerOptions = localStorage.getItem('ngzone') ? { ngZone: "noop" } : undefined;
+
+// @ts-ignore
+platformBrowserDynamic().bootstrapModule(AppModule, compilerOptions)
   .catch(err => console.error(err));
